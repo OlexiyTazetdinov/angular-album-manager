@@ -1,0 +1,20 @@
+<div *ngIf="album$ | async as album" class="row  pl-2 pb-4 pt-4 border-bottom pointer" [routerLink]="[album.id]">
+  <div class="offset-1 col-auto">
+    <app-album-image [imageId]="album?.cover_photo.id"></app-album-image>
+  </div>
+  <div class="pl-2 col-6">
+    <h2 class="text-primary">{{album.name}}</h2>
+    <div class="mb-2">
+      <svg-icon src="assets/icons/file-icon.svg"></svg-icon>
+      {{album.count}} files
+    </div>
+    <div>
+      <!--<svg-icon></svg-icon>-->
+      {{album.updated_time | date:'short'}}
+    </div>
+  </div>
+
+  <div class="offset-1 mt-4">
+    <svg-icon src="assets/icons/double-arrow-icon.svg" [svgStyle]="{ 'width.px':90 }"></svg-icon>
+  </div>
+</div>

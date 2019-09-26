@@ -1,0 +1,11 @@
+<div class="container bg-light">
+  <div  class="mb-2">
+    <h4 *ngIf="album$ | async as album" routerLink="../" class="pointer">< {{album.name}}</h4>
+  </div>
+  <div class="row">
+    <div *ngFor="let photo of photos$ | async" class="col-4 p-4">
+      <app-album-image [imageId]="photo.id"></app-album-image>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="container bg-light">
+  <div  class="mb-2">
+    <h4>Welcome, {{userName}}</h4>
+  </div>
+
+  <div *ngFor="let album of albums$ | async">
+    <app-album-preview [albumId]="album.id"></app-album-preview>
+  </div>
+</div>
