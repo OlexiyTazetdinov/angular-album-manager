@@ -7,8 +7,8 @@ import {AuthGuardService} from './core/auth/auth-guard.service';
 const routes: Routes = [
   {
     path: '',
-    component: AppComponent,
-    canActivate: [AuthGuardService]
+    redirectTo: 'albums',
+    pathMatch: 'full'
   },
   {
     path: 'login',

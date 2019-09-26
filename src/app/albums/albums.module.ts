@@ -7,6 +7,8 @@ import { AlbumPreviewComponent } from './album-preview/album-preview.component';
 import { AlbumImageComponent } from './album-image/album-image.component';
 import {AngularSvgIconModule} from 'angular-svg-icon';
 import { AlbumViewerComponent } from './album-viewer/album-viewer.component';
+import {MatTooltipModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 
@@ -15,7 +17,8 @@ import { AlbumViewerComponent } from './album-viewer/album-viewer.component';
   imports: [
     CommonModule,
     AlbumsRoutingModule,
-    AngularSvgIconModule
+    AngularSvgIconModule,
+    MatTooltipModule,
   ],
   providers: [AlbumService]
 })

@@ -1,3 +1,4 @@
-<div *ngIf="image$ | async as image">
-  <img class="image-small" [src]="image.images[image.images.length-1].source">
+<div *ngIf="image$ | async as image" [matTooltip]="image.name" [matTooltipDisabled]="tooltipDisabled">
+  <img class="image-small"  [src]="image.images[image.images.length-1].source">
 </div>
+

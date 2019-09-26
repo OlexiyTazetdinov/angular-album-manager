@@ -1,3 +1,8 @@
+To run project locally, please use `npm start` . It will run project on https://localhost:4200
+To authorize through facebook, please use test user assigned to the application.
+
+
+
 # AngularAlbumManager
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.

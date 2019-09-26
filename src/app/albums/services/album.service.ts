@@ -21,7 +21,7 @@ export class AlbumService {
   }
 
   getPhoto(photoId) {
-    return from(this.facebookService.api(`/${photoId}?fields=images`));
+    return from(this.facebookService.api(`/${photoId}?fields=images,name`));
   }
 
   getPhotosFromAlbum(albumId) {

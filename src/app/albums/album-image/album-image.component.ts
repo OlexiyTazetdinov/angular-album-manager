@@ -12,6 +12,10 @@ export class AlbumImageComponent implements OnInit {
   @Input()
   imageId: string;
 
+  @Input()
+  tooltipDisabled = false;
+
+
   image$: Observable<any>;
 
   constructor(private albumService: AlbumService) {
