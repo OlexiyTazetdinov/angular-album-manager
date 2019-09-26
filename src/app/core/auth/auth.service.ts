@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {FacebookService, InitParams} from 'ngx-facebook';
 import {from, Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
 
 @Injectable()
 export class AuthService {

@@ -21,8 +21,6 @@ export class AlbumsComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('Test');
-    console.log(this.authService.retrieveUser());
     this.userName = JSON.parse(this.authService.retrieveUser()).name;
     this.albums$ = this.albumService.getAlbums();
   }

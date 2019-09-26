@@ -13,7 +13,6 @@ export class AuthGuardService implements CanActivate {
 
   canActivate(): Observable<boolean> {
     return this.authService.getLoginStatus().pipe(map(response => {
-      console.log('RESPONSE:', response);
       if(response.status === 'connected'){
         return true;
       }

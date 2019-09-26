@@ -19,17 +19,13 @@ export class LoginComponent implements OnInit {
 
   submitLogin() {
     this.authService.loginWithFacebook().subscribe((response) => {
-      console.log('submitLogin', response);
       if (response.authResponse) {
-        console.log(response.authResponse);
-        // this.authService.setUserId(response.authResponse.userID);
         this.authService.getUser(response.authResponse.userID).subscribe((res)=>{
           this.authService.storeUser(res);
-        })
+        });
         this.router.navigate(['albums']);
       }
       else {
-        console.log('User login failed');
       }
     });
   }
